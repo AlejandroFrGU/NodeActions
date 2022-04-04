@@ -26,4 +26,4 @@ jobs:
             fi"
           ssh ubuntu@${{ secrets.SSH_HOST }} "if pgrep node; then forever stopall; fi"
           ssh ubuntu@${{ secrets.SSH_HOST }} "cd NodeActions && npm install"
-          ssh ubuntu@${{ secrets.SSH_HOST }} "cd NodeActions && forever start src/main.js"
+          ssh ubuntu@${{ secrets.SSH_HOST }} "cd NodeActions && PORT=8080 forever start src/main.js"
