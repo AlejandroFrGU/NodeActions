@@ -25,4 +25,4 @@ jobs:
         if: success() || failure() 
         with:
           name: test-results 
-          path: ./coverage/test.results.xm
+          path: coverage/test.results.xm
